@@ -23,13 +23,13 @@
 
 namespace QPurple {
 
-    void init(); // call this in main to start libpurple
-
     typedef struct _PurpleGLibIOClosure {
             PurpleInputFunction function;
             guint result;
             gpointer data;
     } PurpleGLibIOClosure;
 }
+
+void qpurple_init(); // call this in main to start libpurple
 
 #endif

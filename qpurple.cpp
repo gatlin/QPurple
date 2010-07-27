@@ -180,9 +180,8 @@ namespace QPurple {
             /* Load the pounces. */
             //purple_pounces_load();
     }
+}
 
-    // external wrappers
-    void init() {
-        _init_libpurple();
-    }
+void qpurple_init() {
+    QPurple::_init_libpurple();
 }
