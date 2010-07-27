@@ -35,6 +35,12 @@ a program could use libpurple
 
 4. STATUS / NEWS
 
+27 July 2010
+What the hell was I thinking, this is completely untestend (and apparently
+buggy) code.  Also, version numbers are pretty stupid too. 
+
+I need to not do these things at 3am.  
+
 0.1.0, 26 July 2010
 This is the inaugural version.  Event loop integration works, and a very stupid
 and useless but nonetheless working program could link with this library and 
