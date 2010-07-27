@@ -1,26 +1,25 @@
 #include <QtCore/QCoreApplication>
-#include "../qpurple/qpurple.h"
+#include "../qpurple.h"
+#include <iostream>
+#include <string>
 
 int main(int argc, char *argv[])
 {
     QCoreApplication a(argc, argv);
     qpurple_init();
-    char* res = 0;
-    PurpleAccount *theAccount, *anotherAccount;
 
-     /* Create the account */
-     theAccount = purple_account_new("nebobot@jabber.org", "prpl-jabber");
+    PurpleAccount *theAccount;
+    std::string accountUsername, accountPassword;
 
-     /* Get the password for the account */
-     //password = getpass("Password: ");
-     purple_account_set_password(theAccount, "stoner");
+    std::cout << "XMPP username: ";
+    std::getline(std::cin,accountUsername);
+    accountPassword = getpass("Password:");
 
-     /* It's necessary to enable the account first. */
-     purple_account_set_enabled(theAccount, UI_ID, TRUE);
-
-     anotherAccount = purple_account_new("redhed2k3","prpl-aim");
-     purple_account_set_password(anotherAccount,"stoner");
-     purple_account_set_enabled(anotherAccount, UI_ID, TRUE);
-
+    /* Create the account */
+    theAccount = purple_account_new(accountUsername.c_str(), "prpl-jabber");
+    /* Get the password for the account */
+    purple_account_set_password(theAccount, accountPassword.c_str());
+    /* It's necessary to enable the account first. */
+    purple_account_set_enabled(theAccount, UI_ID, TRUE);
     return a.exec();
 }
