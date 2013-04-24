@@ -5,31 +5,31 @@ A Qt interface to libpurple
 
 0. LICENSING
 This software is provided as-is, with no warranty express or implied, under the
-terms of the GNU General Public License, version 3.  You may obtain the text of
-this license at http://www.gnu.org/licenses/gpl.txt
+terms of the GNU General Public License, version 2.  You may obtain the text of
+this license at http://www.gnu.org/licenses/gpl-2.0.txt.
 
 1. PURPOSE
 Qt is a very nice C++ library which is all but necessary to make the language
 bearable (in the eyes of the author); libpurple is the pre-eminent multi-
 protocol communications library, which is useful in a number of cross-platform
-applications. 
+applications.
 
 QPurple attempts to provide a Qt interface to libpurple.  This is to be
 accomplished by integrating libpurple with the Qt event loop, and providing
 high-level wrapper classes which expose the libpurple core through signals and
-slots.  In this way, a developer can start using libpurple in a Qt program, 
-making use of constructs familiar to anyone who has used Qt.  
+slots.  In this way, a developer can start using libpurple in a Qt program,
+making use of constructs familiar to anyone who has used Qt.
 
 2. INSTALLATION
-This library requires qmake to build.  The specifics depend on your platform; 
+This library requires qmake to build.  The specifics depend on your platform;
 for more information read up on qmake. The result is a shared object which you
-may put wherever the hell you want. 
+may put wherever the hell you want.
 
 Note that building the libqpurple library does not automatically build the test
-project; that is done separately in the test directory itself.  
+project; that is done separately in the test directory itself.
 
 3. ROADMAP
-Roadmap for upcoming releases: 
+Roadmap for upcoming releases:
 * exposing the UI ops, etc as slots for other classes to fill in. You know, so
 a program could use libpurple
 * exposing accounts, buddy lists, and other integral objects as classes >_>
@@ -40,17 +40,17 @@ a program could use libpurple
 
 27 July 2010
 What the hell was I thinking, this is completely untestend (and apparently
-buggy) code.  Also, version numbers are pretty stupid too. 
+buggy) code.  Also, version numbers are pretty stupid too.
 
-I need to not do these things at 3am.  
+I need to not do these things at 3am.
 
 27 July 2010, Addendum
-I have created a test sub-project called "test" which will showcase what is 
-possible with qpurple.  
+I have created a test sub-project called "test" which will showcase what is
+possible with qpurple.
 
 0.1.0, 26 July 2010
 This is the inaugural version.  Event loop integration works, and a very stupid
-and useless but nonetheless working program could link with this library and 
-initialize the libpurple core, though nothing would be gained by it.  
+and useless but nonetheless working program could link with this library and
+initialize the libpurple core, though nothing would be gained by it.
 
 
